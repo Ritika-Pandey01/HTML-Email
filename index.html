@@ -100,7 +100,7 @@
 			font-weight: 600;
 			font-size: 14px;
 			line-height: 28px;
-			letter-spacing: 0.5;
+			letter-spacing: 0.5%;
 			color: #000000;
 		}
 
@@ -109,7 +109,7 @@
 			font-weight: 700;
 			font-size: 12px;
 			line-height: 16px;
-			letter-spacing: 0.5;
+			letter-spacing: 0.5%;
 			margin-left: 40px;
 			margin-top: 32px;
 			padding: 12px 24px;
@@ -132,10 +132,26 @@
 			margin-left: 84px;
 			margin-right: 40px;
 		}
+		.footerPara span{
+			display: block;
+			font-family: 'Lato',sans-serif;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 21px;
+			color: #888888;
+			letter-spacing: 0.5%;
+		}
 
 		@media screen and (max-width: 600px) {
 			.logo .column {
 				padding-left: 50px;
+			}
+			.buttonR{
+				padding-left: 25%;
+			}
+			.messagebox{
+				margin-left: 40px;
+				margin-top: 20px;
 			}
 		}
 	</style>
@@ -174,11 +190,11 @@
 			</tr>
 			<tr>
 				<td class="content">
-					<p style="font-size: 20px; font-weight:700 ;letter-spacing: 0.5;">New Message from Nishant on
+					<p style="font-size: 20px; font-weight:700 ;letter-spacing: 0.5%;">New Message from Nishant on
 						PingSafe</p>
 					<p style="font-size: 14px;font-weight: 400;color: #333333;line-height:28px;">Nishant Mittal (<a
 							href="mailto:nishant@pingsafe.com"
-							style="text-decoration: none !important;">nishant@pingsafe.com</a>) has mentioned you in a
+							style="text-decoration: none !important;color: #043CD0;">nishant@pingsafe.com</a>) has mentioned you in a
 						conversation.</p>
 				</td>
 			</tr>
@@ -203,7 +219,7 @@
 					<span class="headings">
 						Severity:</span>
 					<span
-						style="font-weight:700;font-size :12px;line-height:16px;letter-spacing: 0.5;color: #CC0500;padding-right: 2px;">Critical</span>
+						style="font-weight:700;font-size :12px;line-height:16px;letter-spacing: 0.5%;color: #CC0500;padding-right: 2px;">Critical</span>
 					<span class="dot"></span>
 					<span class="dot"></span>
 					<span class="dot"></span>
@@ -222,7 +238,7 @@
 			</tr>
 			<!-- MENTIONED SECTION -->
 			<tr>
-				<td style="background-color:#FFFFFF;padding:0 40px;">
+				<td style="background-color:#FFFFFF;padding:32px 40px 0px 32px;">
 					<span class="mdot"><span style="padding-left:9px;">N</span></span>
 					<span
 						style="padding-left:18px;font-weight:600;font-size:12px;line-height: 28px;color:#000000;">Nishant</span><span
@@ -235,13 +251,34 @@
 
 					<p width="516px" height="92px" class="messagebox">
 						Mohit please look into it.</p>
-					<br>
-					<a href="#" class="button">View message</a>
+					<br><span class="buttonR">
+					<a href="#" class="button">View message</a></span>
 
 				</td>
 			</tr>
 			<!-- FOOTER SECTION -->
+<tr>
+	<td style="background-color:#F8F9FA ;">
+		<table width="100%">
+			<tr>
+				<td style="padding-left:40px ; padding-top: 24px;">
+					<p style="font-family:'Lato',sans-serif ;font-weight: 400;font-size: 12px;line-height: 21px;letter-spacing: 0.5%;color: #888888;">
+						For any instant help, please contact us at <a
+						href="mailto:nishant@pingsafe.com"
+						style="text-decoration: none !important;color: #043CD0;font-weight: 700;font-size: 12px;line-height: 21px;letter-spacing: 0.5%;">support@pingsafe.com</a></p>
 
+						<a href="#"><img src="images/twitter.png" alt="twitter logo" width="18" style="padding-right:28.84px ;"></a>
+						<a href="#"><img src="images/linkedin.png" alt="linkedin logo" width="18"></a>
+						<p class="footerPara">
+							<span>PingSafe, Inc. </span>
+							<span>548 Market St, San Francisco, California 94104, US</span>
+						</p>
+						
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
 		</table>
 
 	</center>
