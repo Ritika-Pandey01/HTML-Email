@@ -16,7 +16,6 @@
 		body {
 			margin: 0;
 			background-color: #F8F9FA;
-
 		}
 
 		table {
@@ -31,8 +30,7 @@
 			width: 100%;
 			table-layout: fixed;
 			background-color: #F8F9FA;
-			padding-bottom: 40px;
-			padding-top: 40px;
+
 		}
 
 		.main {
@@ -43,21 +41,24 @@
 			border-spacing: 0;
 			font-family: Inter, sans-serif;
 			color: #333333;
+
 		}
 
+		.logo {
+			cursor: pointer;
+		}
 
 		.content {
 			padding: 40px 40px 32px 40px;
-
-			background-color: #FFFFFF;
 			border-radius: 4px;
 		}
 
-		.errorbar {
-
-			padding: 0 40px;
-			font-size: 0;
-
+		.submessage {
+			font-size: 14px;
+			font-weight: 400;
+			color: #333333;
+			line-height: 28px;
+			margin: 0;
 		}
 
 		.dot {
@@ -89,44 +90,31 @@
 			color: #000000;
 		}
 
-		.button {
+		.messagebutton {
 			background-color: #043CD0;
+			color: #ffffff;
+			border: none;
+			border-radius: 4px;
+			padding: 12px 24px;
 			font-weight: 700;
 			font-size: 12px;
 			line-height: 16px;
 			letter-spacing: 0.5%;
-			margin-left: 40px;
-			margin-top: 32px;
-			padding: 12px 24px;
-			color: #FFFFFF;
-			text-decoration: none;
-			border-radius: 4px;
-
 		}
 
 		.messagebox {
 			background-color: #F9F9F9;
 			border-radius: 0 4px 4px 4px;
 			font-weight: 400;
-			margin-top: 0;
 			font-size: 12px;
 			text-align: left;
 			vertical-align: top;
 			line-height: 28px;
 			padding: 12px 0 52px 16px;
-			margin-left: 84px;
-			margin-right: 40px;
+			margin: 0 40px 32px 84px;
+
 		}
 
-		.footerPara span {
-			display: block;
-
-			font-weight: 400;
-			font-size: 12px;
-			line-height: 21px;
-			color: #888888;
-			letter-spacing: 0.5%;
-		}
 
 		.footercontent {
 			font-weight: 400;
@@ -136,13 +124,18 @@
 			color: #888888;
 		}
 
+		.spandisplay {
+			display: block;
+		}
+
 		@media screen and (max-width: 600px) {
-			.logo{
-				padding-left: 40%;
-				
+			.logo {
+				padding-left: 35%;
+
 			}
+
 			.buttonR {
-				padding-left: 25%;
+				padding-left: 30%;
 			}
 
 			.messagebox {
@@ -154,13 +147,13 @@
 </head>
 
 <body>
-	<center class="wrapper">
+	<center class="wrapper" role="article">
 
-		<table class="main" width="100%">
+		<table class="main" width="100%" style="background-color:#FFFFFF;">
 
 			<!-- LOGO SECTION -->
 			<tr>
-				<td style="padding:0 40px 10px;">
+				<td style="padding:40px 0 20px 40px;background-color:#F8F9FA ;">
 					<a href="https://www.pingsafe.com/"><img class="logo" src="images/PingSafe Logo.png" width="99.55"
 							alt="Pingsafe's logo" title="Pingsafe's Logo"></a>
 				</td>
@@ -168,10 +161,10 @@
 			<!-- HEADER SECTION -->
 			<tr>
 				<td class="content">
-					<p style="font-size: 20px; font-weight:700 ;letter-spacing: 0.5%;">New Message from Nishant on
+					<p style="font-size: 20px; font-weight:700 ;line-height:16px;letter-spacing: 0.5%;color:#000000">New
+						Message from Nishant on
 						PingSafe</p>
-					<p style="font-size: 14px;font-weight: 400;color: #333333;line-height:28px;">Nishant Mittal (<a
-							href="mailto:nishant@pingsafe.com"
+					<p class="submessage">Nishant Mittal (<a href="mailto:nishant@pingsafe.com"
 							style="text-decoration: none !important;color: #043CD0;">nishant@pingsafe.com</a>) has
 						mentioned you in a
 						conversation.</p>
@@ -179,12 +172,14 @@
 			</tr>
 			<!-- ERROR SECTION -->
 			<tr>
-				<td style="padding-bottom:40px;background-color:#FFFFFF;">
-					<table class="errorbar" width="100%">
+				<td style="padding-bottom:24px;">
+					<table style="padding: 0 40px;" width="100%">
 						<tr>
 							<td height="52px"
 								style="background-color:#CC05000A;border-radius:4px;border-left: 6px solid red;">
-								<p style="font-weight: 700;font-size:14px;text-align: left;padding-left: 16px;">RDS
+								<p
+									style="font-weight: 700;font-size:14px;text-align: left;padding-left: 22px;margin: 12px 0;">
+									RDS
 									Snapshots are not encrypted</p>
 							</td>
 						</tr>
@@ -194,7 +189,7 @@
 			</tr>
 			<!-- SEVERITY SECTION -->
 			<tr>
-				<td style="background-color:#FFFFFF;padding:0 40px;">
+				<td style="padding:0 40px;">
 					<span class="headings">
 						Severity:</span>
 					<span
@@ -208,31 +203,34 @@
 			</tr>
 			<!-- DESCRIPTION SECTION -->
 			<tr>
-				<td style="background-color:#FFFFFF;padding:0 40px;">
-					<p style="font-weight: 400px;font-size: 14px;line-height: 28px;"><span
-							class="headings">Description:</span> This plugin ensures that RDS snapshots are encrypted at
+				<td style="padding:24px 40px 0;">
+					<p class="submessage"><span class="headings">Description:</span> This plugin ensures that RDS
+						snapshots are encrypted at
 						rest by enabling encryption. RDS snapshots on AWS come with encryption, which should be enabled
 						to ensure that all data at rest is secure.</p>
 				</td>
 			</tr>
 			<!-- MENTIONED SECTION -->
 			<tr>
-				<td style="background-color:#FFFFFF;padding:32px 40px 0px 32px;">
+				<td style="padding:32px 40px 8px 40px;">
 					<span class="mdot"><span style="padding-left:9px;">N</span></span>
 					<span
-						style="padding-left:18px;font-weight:600;font-size:12px;line-height: 28px;color:#000000;">Nishant</span><span
+						style="padding-left:16px;font-weight:600;font-size:12px;line-height: 28px;color:#000000;">Nishant</span><span
 						style="font-weight: 400px;font-size: 12px;line-height: 28px;"> mentioned you in a
 						conversation</span>
 				</td>
 			</tr>
 			<tr>
-				<td style="padding-bottom:40px;background-color:#FFFFFF;border-radius: 0 0 4px 4px;">
+				<td style="border-radius: 0 0 4px 4px;">
 
 					<p width="516px" height="92px" class="messagebox">
 						Mohit please look into it.</p>
-					<br><span class="buttonR">
-						<a href="#" class="button">View message</a></span>
 
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:0px 0px 40px 40px; text-align:left;">
+					<button class="messagebutton">View message</button>
 				</td>
 			</tr>
 			<!-- FOOTER SECTION -->
@@ -240,7 +238,7 @@
 				<td style="background-color:#F8F9FA ;">
 					<table width="100%">
 						<tr>
-							<td style="padding-left:40px ; padding-top: 24px;font-family: 'Lato',sans-serif;">
+							<td style="padding-left:40px ; padding: 24px 40px 40px;font-family: 'Lato',sans-serif;">
 								<p class="footercontent">
 									For any instant help, please contact us at <a href="mailto:support@pingsafe.com"
 										style="text-decoration: none !important;color: #043CD0;font-weight: 700;font-size: 12px;line-height: 21px;letter-spacing: 0.5%;">support@pingsafe.com</a>
@@ -248,12 +246,12 @@
 
 								<a href="https://twitter.com/PingsafeAI?s=20&t=EO8aQv8g0_huAe0ftnefBg"><img
 										src="images/twitter.png" alt="twitter logo" width="18"
-										style="padding-right:28.84px ;"></a>
+										style="padding-right:28.84px ;" title="Pingsafe's Twitter handle"></a>
 								<a href="https://www.linkedin.com/company/pingsafe/"><img src="images/linkedin.png"
-										alt="linkedin logo" width="18"></a>
-								<p class="footerPara">
-									<span>PingSafe, Inc. </span>
-									<span>548 Market St, San Francisco, California 94104, US</span>
+										alt="linkedin logo" width="18" title="Pingsafe's linkedin"></a>
+								<p class="footercontent">
+									<span class="spandisplay">PingSafe, Inc. </span>
+									<span class="spandisplay">548 Market St, San Francisco, California 94104, US</span>
 								</p>
 								<a href="#" class="footercontent" style="font-size: 8px;">Unsubscribe</a>
 							</td>
